@@ -1,1 +1,19 @@
-/* You can add global styles to this file, and also import other style files */
+@import "~bootstrap-icons/font/bootstrap-icons.css";
+@import url("./styles/reset.css");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Rubik:wght@300&display=swap");
+
+body {
+  width: 100vw;
+  min-height: 100vh;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  min-height: 100vh;
+}
+
+main > section {
+  flex: 1; /* o componente preenche todo espaço restante dentro de um elemento flex pai */
+}

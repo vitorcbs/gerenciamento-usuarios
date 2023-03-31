@@ -1,0 +1,51 @@
+* {
+  font-family: "Roboto", sans-serif;
+}
+
+.insert {
+}
+
+.insert-title {
+  padding: 30px 10px;
+  text-align: center;
+  font-weight: 700;
+  font-size: 30px;
+}
+
+.cadastro {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  width: 60%;
+}
+
+.cadastro-title {
+  padding: 20px;
+  font-weight: 700;
+  background-color: #6C7AE0;
+  border-radius: 3px 3px 0 0;
+  border-bottom: none;
+}
+
+.cadastro-inputs {
+  padding: 30px 30px;
+  background-color: #F8F6FF;
+  border-radius: 0 0 3px 3px;
+  display: flex;
+}
+
+.submit-button {
+  background-color: rgb(88, 238, 88);
+  font-weight: 700;
+  border: 1px solid rgb(255, 255, 255);
+  border-radius: 3px;
+  padding: 10px;
+  font-size: 20px;
+  color: #ffffff;
+}
+
+.submit-button:hover {
+  transform: scale(1.2);
+  transition: 0.5s;
+  background-color: rgb(32, 235, 32);
+}

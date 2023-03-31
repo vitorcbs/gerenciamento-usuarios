@@ -1,0 +1,117 @@
+* {
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+.table-list {
+  width: 1366px;
+  margin: 0 auto;
+}
+
+.table-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 33px 30px;
+  width: 100%;
+  background: #fff;
+}
+
+.table-wrap {
+  width: 1170px;
+}
+
+.table.ver1 {
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.table {
+  position: relative;
+  padding-top: 60px;
+  background-color: #fff;
+}
+
+table {
+  width: 100%;
+}
+
+.table-header {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+
+.table.ver1 th {
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+  color: #fff;
+  line-height: 1.4;
+  background-color: #6c7ae0;
+}
+
+.table-header th {
+  padding-top: 18px;
+  padding-bottom: 18px;
+  text-align: left;
+}
+
+.table-header th:nth-child(1) {
+  width: 20%;
+  padding-left: 40px;
+}
+
+.table-header th:nth-child(2) {
+  width: 20%;
+}
+
+.table-header th:nth-child(3) {
+  width: 20%;
+}
+
+.table-header th:nth-child(4) {
+  width: 20%;
+}
+
+.table-header th:nth-child(5) {
+  width: 20%;
+  padding-left: 20px;
+}
+
+.table-header th:nth-child(6) {
+  width: 5%;
+}
+
+th,
+td {
+  font-weight: unset;
+  padding-right: 10px;
+}
+
+.table-body {
+  max-height: 585px;
+}
+
+.scroll {
+  position: relative;
+}
+
+.pscroll {
+  overflow: hidden !important;
+  overflow-anchor: none;
+  touch-action: auto;
+}
+
+.scrollbar::-webkit-scrollbar {
+  background-color: #000;
+}
+
+.scrollbar::-webkit-scrollbar {
+  width: 5px;
+  height: 8px;
+  background-color: #aaa; /* ou que isso seja adicionado ao "caminho" da barra */
+}
+
+

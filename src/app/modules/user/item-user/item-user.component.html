@@ -1,0 +1,48 @@
+<tr [formGroup]="user">
+  <td>
+    <input
+      type="text"
+      formControlName="nome"
+      [readonly]="user.get('editing')?.value == false"
+    />
+  </td>
+  <td>
+    <input
+      type="text"
+      formControlName="sobrenome"
+      [readonly]="user.get('editing')?.value == false"
+    />
+  </td>
+  <td>
+    <input
+      type="email"
+      formControlName="email"
+      [readonly]="user.get('editing')?.value == false"
+    />
+  </td>
+  <td>
+    <input
+      type="date"
+      formControlName="data"
+      [readonly]="user.get('editing')?.value == false"
+    />
+  </td>
+  <td>
+    <select
+      type="select"
+      formControlName="escolaridade"
+      [ngClass]="{ disabled: user.get('editing')?.value == false }"
+    >
+      <option>Infantil</option>
+      <option>Fundamental</option>
+      <option>Médio</option>
+      <option>Superior</option>
+    </select>
+  </td>
+  <td>
+    <div class="flex-buttons">
+      <i class="bi bi-pencil-fill"></i>
+      <i class="bi bi-trash-fill"></i>
+    </div>
+  </td>
+</tr>
