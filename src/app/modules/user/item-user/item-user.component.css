@@ -3,7 +3,7 @@ tr td:nth-child(1) {
   padding-left: 40px;
 }
 
-tr{
+tr {
   background-color: #f8f6ff;
 }
 
@@ -37,7 +37,7 @@ p {
   padding-left: 20px;
 }
 
-tr td:nth-child(1) p{
+tr td:nth-child(1) p {
   padding-left: 0;
 }
 
