@@ -15,19 +15,19 @@ Este repositório contém o projeto desenvolvido como parte do processo seletivo
 <h2>Configuração do Banco de Dados</h2>
 Para a criação do banco de dados, deve ser utilizada a seguinte query:
 
-<p>SQL</p>
+<p><br>SQL</p>
 
-- CREATE TABLE Usuarios (
-- Id INT PRIMARY KEY IDENTITY(1,1),
-- Nome VARCHAR(50) NOT NULL,
-- Sobrenome VARCHAR(50) NOT NULL,
-- Email VARCHAR(100) NOT NULL,
-- DataNascimento DATE NOT NULL,
-- Escolaridade INT NOT NULL
-- );
+CREATE TABLE Usuarios (
+<br>Id INT PRIMARY KEY IDENTITY(1,1),
+<br>Nome VARCHAR(50) NOT NULL,
+<br>Sobrenome VARCHAR(50) NOT NULL,
+<br>Email VARCHAR(100) NOT NULL,
+<br>DataNascimento DATE NOT NULL,
+<br>Escolaridade INT NOT NULL
+<br>);
 
 <h2>Agradecimentos</h2>
-Gostaria de agradecer à empresa Confitec pela oportunidade de participar do processo seletivo. Durante o desenvolvimento do projeto, pude aprender muito sobre as tecnologias utilizadas e aprimorar minhas habilidades de desenvolvimento. Obrigado pela oportunidade!
+<p> Gostaria de agradecer à empresa Confitec pela oportunidade de participar do processo seletivo. Durante o desenvolvimento do projeto, pude aprender muito sobre as tecnologias utilizadas e aprimorar minhas habilidades de desenvolvimento. Obrigado pela oportunidade!</p>
 
-Atenciosamente,
+<br>Atenciosamente,<br>
 Vitor Contine Barros Souza
