@@ -1,27 +1,32 @@
-# GerenciamentoUsuarios
+Desafio Processo Seletivo
+Este repositório contém o projeto desenvolvido como parte do processo seletivo da empresa Confitec.
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.2.4.
+Sobre o Projeto
+O projeto consiste em um sistema simples de cadastro de usuários, que permite a criação, edição, visualização e exclusão de usuários. O front-end foi desenvolvido em Angular, utilizando HTML e CSS para a interface visual. Para simular uma API RESTful, foi utilizado o pacote json-server. Além disso, foram utilizados alguns ícones do PrimeNG.
 
-## Development server
+Tecnologias Utilizadas
+Angular
+HTML
+CSS
+`json-server`
+`PrimeNG`
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Configuração do Banco de Dados
+Para a criação do banco de dados, deve ser utilizada a seguinte query:
 
-## Code scaffolding
+sql
+Copy code
+CREATE TABLE Usuarios (
+  Id INT PRIMARY KEY IDENTITY(1,1),
+  Nome VARCHAR(50) NOT NULL,
+  Sobrenome VARCHAR(50) NOT NULL,
+  Email VARCHAR(100) NOT NULL,
+  DataNascimento DATE NOT NULL,
+  Escolaridade INT NOT NULL
+);
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Agradecimentos
+Gostaria de agradecer à empresa Confitec pela oportunidade de participar do processo seletivo. Durante o desenvolvimento do projeto, pude aprender muito sobre as tecnologias utilizadas e aprimorar minhas habilidades de desenvolvimento. Obrigado pela oportunidade!
 
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Atenciosamente,
+Vitor Contine Barros Souza

@@ -1,48 +1,27 @@
-<tr [formGroup]="user">
+<tr>
   <td>
-    <input
-      type="text"
-      formControlName="nome"
-      [readonly]="user.get('editing')?.value == false"
-    />
+    <p>{{ user.nome }}</p>
   </td>
   <td>
-    <input
-      type="text"
-      formControlName="sobrenome"
-      [readonly]="user.get('editing')?.value == false"
-    />
+    <p>{{ user.sobrenome }}</p>
   </td>
   <td>
-    <input
-      type="email"
-      formControlName="email"
-      [readonly]="user.get('editing')?.value == false"
-    />
+    <p>{{ user.email }}</p>
   </td>
   <td>
-    <input
-      type="date"
-      formControlName="data"
-      [readonly]="user.get('editing')?.value == false"
-    />
+    <p>{{ user.data }}</p>
   </td>
   <td>
-    <select
-      type="select"
-      formControlName="escolaridade"
-      [ngClass]="{ disabled: user.get('editing')?.value == false }"
-    >
-      <option>Infantil</option>
-      <option>Fundamental</option>
-      <option>Médio</option>
-      <option>Superior</option>
-    </select>
+    <p>{{ user.escolaridade }}</p>
   </td>
   <td>
     <div class="flex-buttons">
-      <i class="bi bi-pencil-fill"></i>
-      <i class="bi bi-trash-fill"></i>
+      <button routerLink="user/edit/{{ user.id }}">
+        <i class="bi bi-pencil-fill"></i>
+      </button>
+      <button>
+        <i class="bi bi-trash-fill" routerLink="user/remove/{{ user.id }}"></i>
+      </button>
     </div>
   </td>
 </tr>

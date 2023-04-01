@@ -3,37 +3,41 @@
     <h1>USUÁRIOS</h1>
   </div>
   <div class="cadastro">
-    <div class="cadastro-title">
-      Adicione um novo usuario
-    </div>
+    <div class="cadastro-title">Adicione um novo usuario</div>
     <div>
-      <form action="" method="post" class="cadastro-inputs">
+      <form
+        action=""
+        method="post"
+        class="cadastro-inputs"
+        [formGroup]="formulario"
+        (ngSubmit)="createUser()"
+      >
         <div>
           <label for="nome">Nome </label>
-          <input id="nome" type="text" />
+          <input id="nome" type="text" formControlName="nome" />
         </div>
         <div>
           <label for="sobrenome"> Sobrenome </label>
-          <input id="sobrenome" type="text" />
+          <input id="sobrenome" type="text" formControlName="sobrenome" />
         </div>
         <div>
           <label for="email"> E-mail </label>
-          <input id="email" type="email" />
+          <input id="email" type="email" formControlName="email" />
         </div>
         <div>
           <label for="datanasc"> Data nascimento </label>
-          <input id="datanasc" type="date" />
+          <input id="datanasc" type="date" formControlName="data" />
         </div>
         <div>
           <label for="escolaridade"> Escolaridade </label>
-          <select id="escolaridade" type="">
+          <select id="escolaridade" formControlName="escolaridade">
             <option value="Infantil">Infantil</option>
             <option value="Fundamental">Fundamental</option>
             <option value="Medio">Medio</option>
             <option value="Superior">Superior</option>
           </select>
         </div>
-        <input type="submit" value="Criar" class="submit-button">
+        <input type="submit" value="Criar" class="submit-button" />
       </form>
     </div>
   </div>

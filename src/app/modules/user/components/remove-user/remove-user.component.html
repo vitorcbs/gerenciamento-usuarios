@@ -1,0 +1,16 @@
+<section class="remove">
+  <div class="background-remove">
+    <p class="remove-title">Deseja realmente excluir o usuario?</p>
+    <div>
+      <p class="username">
+        Usuario a ser removido: {{ user.nome + user.sobrenome }}
+      </p>
+      <div class="button-div">
+        <button class="botao-excluir" (click)="removeUser()">Excluir</button>
+        <button class="botao-cancelar" (click)="cancelRemove()">
+          Cancelar
+        </button>
+      </div>
+    </div>
+  </div>
+</section>

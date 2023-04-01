@@ -1,0 +1,63 @@
+<section>
+  <div class="insert-title">
+    <h1>{{ user.nome }}</h1>
+  </div>
+  <div class="cadastro">
+    <div class="cadastro-title">Edite um usuario</div>
+    <div>
+      <form class="cadastro-inputs">
+        <div>
+          <label for="nome"> Nome </label>
+          <input id="nome" type="text" name="nome" [(ngModel)]="user.nome" />
+        </div>
+        <div>
+          <label for="sobrenome"> Sobrenome </label>
+          <input
+            id="sobrenome"
+            type="text"
+            name="sobrenome"
+            [(ngModel)]="user.sobrenome"
+          />
+        </div>
+        <div>
+          <label for="email"> E-mail </label>
+          <input
+            id="email"
+            type="email"
+            name="email"
+            [(ngModel)]="user.email"
+          />
+        </div>
+        <div>
+          <label for="datanasc"> Data nascimento </label>
+          <input
+            id="datanasc"
+            type="date"
+            name="data"
+            [(ngModel)]="user.data"
+          />
+        </div>
+        <div>
+          <label for="escolaridade"> Escolaridade </label>
+          <select
+            id="escolaridade"
+            name="escolaridade"
+            [(ngModel)]="user.escolaridade"
+          >
+            <option value="Infantil">Infantil</option>
+            <option value="Fundamental">Fundamental</option>
+            <option value="Medio">Medio</option>
+            <option value="Superior">Superior</option>
+          </select>
+        </div>
+        <input type="submit" class="submit-button" (click)="editUser()" />
+        <input
+          type="button"
+          value="Cancelar"
+          class="submit-button"
+          (click)="cancelEdit()"
+        />
+      </form>
+    </div>
+  </div>
+</section>

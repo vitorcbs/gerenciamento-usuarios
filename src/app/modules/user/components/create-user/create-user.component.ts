@@ -1,10 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import {
-  FormBuilder,
-  FormControl,
-  FormGroup,
-  Validators,
-} from '@angular/forms';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
+import { User } from '../../services/user';
+import { UserService } from './../../services/user.service';
 
 @Component({
   selector: 'app-create-user',
@@ -12,28 +10,42 @@ import {
   styleUrls: ['./create-user.component.css'],
 })
 export class CreateUserComponent implements OnInit {
-  formulario: FormGroup;
+  users: User[] = [];
 
-  constructor() {
-    this.formulario = new FormGroup({
-      nome: new FormControl('', [
-        Validators.required,
-        Validators.maxLength(255),
-      ]),
-      sobrenome: new FormControl('', [
-        Validators.required,
-        Validators.maxLength(255),
-      ]),
-      email: new FormControl('', [Validators.required, Validators.email]),
-      data: new FormControl('', [
-        Validators.required,
-        Validators.pattern(
-          ''
-        ),
-      ]),
-      educacao: new FormControl('', [Validators.required]),
+  formulario!: FormGroup;
+
+  ngOnInit(): void {
+    this.formulario = this.FormBuilder.group({
+      nome: [
+        '',
+        Validators.compose([Validators.required, Validators.maxLength(255)]),
+      ],
+      sobrenome: [
+        '',
+        Validators.compose([Validators.required, Validators.maxLength(255)]),
+      ],
+      email: ['', Validators.compose([Validators.required, Validators.email])],
+      data: [
+        '',
+        Validators.compose([Validators.required, Validators.pattern('')]),
+      ],
+      escolaridade: ['', Validators.compose([Validators.required])],
     });
   }
 
-  ngOnInit(): void {}
+  constructor(
+    private service: UserService,
+    private router: Router,
+    private FormBuilder: FormBuilder
+  ) {}
+
+  createUser() {
+    console.log(this.formulario.status);
+    this.service.criar(this.formulario.value).subscribe(() => {
+      this.service.listar().subscribe((users) => {
+        this.users = users;
+        this.router.navigate(['']);
+      });
+    });
+  }
 }

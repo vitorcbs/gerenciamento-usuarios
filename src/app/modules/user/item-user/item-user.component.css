@@ -25,19 +25,19 @@ tr td:nth-child(6) {
   text-align: right;
 }
 
-tr td:last-child i{
+tr td:last-child i {
   color: #5e5e5e;
 }
 
-.flex-buttons{
+p {
+  padding-left: 30px;
+}
+
+.flex-buttons {
   display: flex;
   justify-content: flex-end;
   gap: 0.625rem;
   align-items: center;
-}
-
-tr:nth-child(even) {
-  background-color: #f8f6ff;
 }
 
 td {
@@ -55,10 +55,14 @@ td {
 
 input {
   border: 0px;
+  background-color: #ffffff62;
+}
+
+.disabled {
+  pointer-events: none;
   background-color: #5e5e5e62;
 }
 
-.disabled{
-  pointer-events: none;
-  background-color: #5e5e5e62;
+tbody tr:nth-child(even) {
+  background-color: #3e09ff;
 }

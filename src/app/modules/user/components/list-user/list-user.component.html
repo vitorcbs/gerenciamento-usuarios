@@ -19,7 +19,9 @@
         <div class="table-body scrollbar">
           <table>
             <tbody>
-              <app-item-user></app-item-user>
+              <ng-container *ngFor="let user of listUser">
+                <app-item-user [user]="user"></app-item-user>
+              </ng-container>
             </tbody>
           </table>
         </div>

@@ -1,28 +1,22 @@
-import { Component } from '@angular/core';
-import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { Component, Input, OnInit } from '@angular/core';
+import { User } from './../services/user';
 
 @Component({
   selector: 'app-item-user',
   templateUrl: './item-user.component.html',
   styleUrls: ['./item-user.component.css'],
 })
-export class ItemUserComponent {
-  user: FormGroup;
+export class ItemUserComponent implements OnInit {
+  @Input() user: User = {
+    id: 0,
+    nome: '',
+    sobrenome: '',
+    email: '',
+    data: new Date(''),
+    escolaridade: '',
+  };
 
-  constructor() {
-    this.user = new FormGroup({
-      nome: new FormControl('', [
-        Validators.required,
-        Validators.maxLength(255),
-      ]),
-      sobrenome: new FormControl('', [
-        Validators.required,
-        Validators.maxLength(255),
-      ]),
-      email: new FormControl('', [Validators.required, Validators.email]),
-      data: new FormControl('', [Validators.required, Validators.pattern('')]),
-      escolaridade: new FormControl('', [Validators.required]),
-      editing: new FormControl(false),
-    });
-  }
+  constructor() {}
+
+  ngOnInit(): void {}
 }
