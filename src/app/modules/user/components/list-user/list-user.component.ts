@@ -17,10 +17,4 @@ export class ListUserComponent implements OnInit {
       this.listUser = listaUser;
     });
   }
-
-  updateUserList(): void {
-    this.service.listar().subscribe((listaUser) => {
-      this.listUser = listaUser;
-    });
-  }
 }
