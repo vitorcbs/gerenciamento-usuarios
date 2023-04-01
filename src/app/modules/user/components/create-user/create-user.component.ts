@@ -44,7 +44,7 @@ export class CreateUserComponent implements OnInit {
     this.service.criar(this.formulario.value).subscribe(() => {
       this.service.listar().subscribe((users) => {
         this.users = users;
-        this.router.navigate(['']);
+        this.service.updateUserList();
       });
     });
   }

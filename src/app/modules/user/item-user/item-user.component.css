@@ -3,6 +3,10 @@ tr td:nth-child(1) {
   padding-left: 40px;
 }
 
+tr{
+  background-color: #f8f6ff;
+}
+
 tr td:nth-child(2) {
   width: 20%;
 }
@@ -30,7 +34,11 @@ tr td:last-child i {
 }
 
 p {
-  padding-left: 30px;
+  padding-left: 20px;
+}
+
+tr td:nth-child(1) p{
+  padding-left: 0;
 }
 
 .flex-buttons {
