@@ -15,7 +15,7 @@ Este repositório contém o projeto desenvolvido como parte do processo seletivo
 <h2>Configuração do Banco de Dados</h2>
 Para a criação do banco de dados, deve ser utilizada a seguinte query:
 
-<h2>SQL</h2>
+<p>SQL</p>
 
 - CREATE TABLE Usuarios (
 - Id INT PRIMARY KEY IDENTITY(1,1),
